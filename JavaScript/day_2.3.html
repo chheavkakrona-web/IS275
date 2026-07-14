@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function NP(pri1,dis){
+            return pri1-pri1*dis;
+        }
+        let pri1=1050
+        let dis=0.15
+        let newPrice=NP(pri1,dis);
+        document.write("<h1>Price : "+pri1+" USD</h1>");
+        document.write("<h1>Discount : "+dis*100+"%</h1>");
+        document.write("<h1>Price After Discount : "+newPrice+" USD</h1>");
+    </script>
+</body>
+</html>

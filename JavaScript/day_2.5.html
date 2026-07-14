@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txtVal1">Value 1: </label>
+    <input type="number" id="txtval1"><br>
+    <label for="txtVal2">Value 2: </label>
+    <input type="number" id="txtval2"><br>
+    <h3 id="result">Result</h3>
+    <input type="button" value="+" onclick="add()">
+
+
+    <script>
+        function add(){
+            let val1 = parseInt(document.getElementById("txtval1").value);
+            let val2 = parseInt(document.getElementById("txtval2").value);
+            let total = val1 + val2 ;
+            document.getElementById("result").innerHTML= val1+"+"+val2+"="+total;
+        }
+    </script>
+</body>
+</html>

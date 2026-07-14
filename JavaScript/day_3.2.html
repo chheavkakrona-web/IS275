@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txtName">Name</label>
+    <input type="text" id="txtName"><br>
+    <label for="txtGender">Gender</label>
+    <select id="txtGender">
+        <option value="">Choose Gender</option>
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+    </select><br>
+    <label for="txtWord">MS Word</label>
+    <input type="number" id="txtWord" value="80"><br>
+    <label for="txtExcel">MS Excel</label>
+    <input type="number" id="txtExcel" value="70"><br>
+    <label for="txtAccess">MS Access</label>
+    <input type="number" id="txtAccess" value="60"><br>
+    <input type="button" value="Show" onclick="show()">
+    <h1 id="demo">Welcome</h1>
+    <h3>Total : <span id="total"></span></h3>
+    <h3>Average : <span id="average"></span></h3>
+    <h3>Result : <span id="result"></span></h3>
+    <script>
+        function show(){
+            let tName = document.getElementById("txtName").value;
+            let tGender = document.getElementById("txtGender").value;
+            let tWord= Number(document.getElementById("txtWord").value);
+            // or let tWord= parseInt(document.getElementById("txtWord").value);
+            let tExcel= Number(document.getElementById("txtExcel").value);
+            let tAccess= Number(document.getElementById("txtAccess").value);
+            let tTotal= document.getElementById("total").value;
+            let tAverage= document.getElementById("average").value;
+            let tResult= document.getElementById("result").value;
+            tTotal=tWord+tExcel+tAccess ;
+            tAverage=tTotal/3;
+
+
+            if(tGender=="m")document.getElementById("demo").innerHTML= "hi mr. "+tName;
+            else if(tGender=="f")document.getElementById("demo").innerHTML= "hi miss. "+tName;
+            else document.getElementById("demo").innerHTML= "Unknown Gender";
+            document.getElementById("total").innerHTML= tTotal;
+            document.getElementById("average").innerHTML= tAverage.toFixed(2);
+            if(tAverage >=50)document.getElementById("result").innerHTML= "PASS";
+            else document.getElementById("result").innerHTML= "FAIL";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+
+    <body>
+        <label for="txtKhmer">Khmer </label>
+        <input type="number" id="txtKhmer" value="80"><br>
+        <label for="txtMath">Math</label>
+        <input type="number" id="txtMath" value="70"><br>
+        <label for="txtScience">Science</label>
+        <input type="number" id="txtScience" value="60"><br>
+        <label for="txtComputer">Computer</label>
+        <input type="number" id="txtComputer" value="60"><br>
+        <input type="button" value="Show" onclick="show()">
+        <h3>Total : <span id="total"></span></h3>
+        <h3>Average : <span id="average"></span></h3>
+        <h3>Result : <span id="result"></span></h3>
+        <h3>Grade : <span id="grade"></span></h3>
+        <script>
+            function show() {
+                let tKhmer = Number(document.getElementById("txtKhmer").value);
+                // or let tWord= parseInt(document.getElementById("txtWord").value);
+                let tMath = Number(document.getElementById("txtMath").value);
+                let tScience = Number(document.getElementById("txtScience").value);
+                let tComputer = Number(document.getElementById("txtComputer").value);
+                let tTotal = document.getElementById("total").value;
+                let tAverage = document.getElementById("average").value;
+                let tResult= document.getElementById("result").value;
+                let tGrade= document.getElementById("grade").value;
+                tTotal = tKhmer + tMath + tScience + tComputer;
+                tAverage = tTotal / 4;
+
+                document.getElementById("total").innerHTML = tTotal;
+                document.getElementById("average").innerHTML = tAverage.toFixed(2);
+                if (tAverage > 100 || tAverage < 0)document.getElementById("result").innerHTML = "Unknown Result";
+                else if (tAverage >= 50)document.getElementById("result").innerHTML= "PASS";
+                else document.getElementById("result").innerHTML= "FAIL";
+
+                if (tAverage > 100 || tAverage < 0)document.getElementById("grade").innerHTML = "Unknown Grade";
+                else if(tAverage>=90)document.getElementById("grade").innerHTML= "A";
+                else if(tAverage>=80)document.getElementById("grade").innerHTML= "B";
+                else if(tAverage>=70)document.getElementById("grade").innerHTML= "C";
+                else if(tAverage>=60)document.getElementById("grade").innerHTML= "D";
+                else if(tAverage>=50)document.getElementById("grade").innerHTML= "E";
+                else document.getElementById("grade").innerHTML= "F";
+            }
+
+        </script>
+    </body>
+
+</html>

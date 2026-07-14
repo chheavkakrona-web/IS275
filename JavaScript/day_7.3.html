@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txtName">Type in: </label>
+    <input type="text" id="txtName"><br>
+    <label for="txtLoop">Type in: </label>
+    <input type="number" id="txtLoop"><br>
+    <input type="button" value="SHOW" onclick="show()"><br>
+    <div id="showResult">Result Here</div>
+    <script>
+        function show(){
+            let tName = document.getElementById("txtName").value;
+            let tLoop = document.getElementById("txtLoop").value;
+            let test="";
+            for (let i=1; i<=tLoop; i++){
+                test +="<h3> "+i+". "+tName+"</h3>"
+            }
+            document.getElementById("showResult").innerHTML=test;
+        }
+    </script>
+</body>
+</html>

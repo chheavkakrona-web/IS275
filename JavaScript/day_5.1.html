@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txtName">Name</label>
+    <input type="text" id="txtName"><br>
+    <label for="txtGender">Gender</label>
+    <select id="txtGender">
+        <option value="">Choose Gender</option>
+        <option value="m">Male</option>
+        <option value="f">Female</option>
+    </select><br><br><br>
+    <label for="txtProduct">Product</label>
+    <select id="txtProduct">
+        <option value="CocaCola">CocaCola</option>
+        <option value="Pepsi">Pepsi</option>
+        <option value="Prime">Prime</option>
+    </select><br>
+    <label for="txtUnitPrice">Unit Price</label>
+    <input type="number" id="txtUnitPrice">
+    <label>$</label><br>
+    <label for="txtQty">Qty</label>
+    <input type="number" id="txtQty"><br><br>
+    <input type="button" value="Show" onclick="show()">
+    <h3>Customer Name : <span id="result"></span></h3>
+    <h4> First Name: <span id="fName"></span></h4>
+    <h4> Last Name: <span id="lName"></span></h4>
+    <h4> Product: <span id="product"></span></h4>
+    <h4> Unit Price: <span id="unitprice"></span></h4>
+    <h4> Qty: <span id="qty"></span></h4>
+    <h4> Amount: <span id="amount"></span></h4>
+    <h4> Discount: <span id="dis"></span></h4>
+    <h4> Price After Discount: <span id="pad"></span></h4>
+    
+
+
+    <script>
+        function show(){
+            let tName = document.getElementById("txtName").value;
+            let indexOfSpace=tName.indexOf(" ");           
+            let tGender = document.getElementById("txtGender").value;
+            let tProduct = document.getElementById("txtProduct").value;
+            let tUnitePrice = Number(document.getElementById("txtUnitPrice").value);
+            let tQty = Number(document.getElementById("txtQty").value);
+            let amount=tQty*tUnitePrice;
+            let dis;
+            if (tQty >= 1000) {
+                dis = 25;
+            }
+            else if(tQty>= 550) {
+                dis = 20;
+            } 
+             else if(tQty >= 400) {
+                dis = 18;
+             }
+            else if(tQty >= 250){
+                dis = 15;
+            }
+            else if(tQty >= 100) {
+                dis = 10;
+            }
+            else dis = 0;
+            let Pad = amount - amount*(dis/100);
+            
+            if(tGender=="m")document.getElementById("result").innerHTML= "Hi Mr. "+tName;
+            else if(tGender=="f")document.getElementById("result").innerHTML= "Hi Miss. "+tName;
+            else document.getElementById("result").innerHTML= "Unknown Gender";
+            document.getElementById("lName").innerHTML= tName.substr(0,indexOfSpace);
+            document.getElementById("fName").innerHTML= tName.substr(indexOfSpace+1);
+            document.getElementById("product").innerHTML= tProduct;
+            document.getElementById("unitprice").innerHTML= tUnitePrice;
+            document.getElementById("qty").innerHTML= tQty;
+            document.getElementById("amount").innerHTML= amount+" $";
+            document.getElementById("dis").innerHTML= dis+"%"  ;
+            document.getElementById("pad").innerHTML= Pad +" $";
+        }
+        </script>                            
+    </body>
+</html>

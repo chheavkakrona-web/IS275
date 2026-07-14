@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txtName">Name</label>
+    <input type="text" id="txtName"><br>
+    <label for="txtAge">Age</label>
+    <input type="text" id="txtAge"><br>
+    <input type="button" value="Show" onclick="show()">
+    <h4 id="result">result</h4>
+    <h4> First Name: <span id="fName"></span></h4>
+    <h4> Last Name: <span id="lName"></span></h4>
+    <script>
+        function show(){
+            let w1 = document.getElementById("txtName").value;
+            let w2 = document.getElementById("txtAge").value;
+            let indexOfSpace=w1.indexOf(" ");
+
+            document.getElementById("result").innerHTML= "Hi "+w1+", you are "+w2+" years old.";
+            document.getElementById("lName").innerHTML= w1.substr(0,indexOfSpace);
+            document.getElementById("fName").innerHTML= w1.substr(indexOfSpace+1);
+            
+        }
+
+    </script>
+</body>
+</html>

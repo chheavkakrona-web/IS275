@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Value 1: <span id="v1"></span></h1>
+    <h1>Value 2: <span id="v2"></span></h1>
+    <h1>Result : <span id="result"></span></h1>
+    <h1>Result : <span id="result1"></span></h1>
+    <h1>Result : <span id="result2"></span></h1>
+    <h1>Result : <span id="result3"></span></h1>
+
+    <script>
+        let val1=50, val2=20, presult, sresult, mresult,dresult;
+        presult=val1+val2;
+        sresult=val1-val2;
+        mresult=val1*val2;
+        dresult=val1/val2;
+        document.getElementById("v1").innerHTML=val1;
+        document.getElementById("v2").innerHTML=val2;
+        document.getElementById("result").innerHTML=val1 + " + " + val2 + " = " + presult  ;
+        document.getElementById("result1").innerHTML=val1 + " - " + val2 + " = " + sresult  ;
+        document.getElementById("result2").innerHTML=val1 + " x " + val2 + " = " + mresult  ;
+        document.getElementById("result3").innerHTML=val1 + " / " + val2 + " = " + dresult  ;
+        // document.write("<h1>"+val1+" + "+val2+" = "+result+"</h1>")
+    </script>
+</body>
+</html>

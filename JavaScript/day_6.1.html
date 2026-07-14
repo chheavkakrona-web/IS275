@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .showResult table, .showResult td{
+            border: 1px solid #000;
+        }
+        .showResult table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> <label for="txtName"> Name: </label> </td>
+            <td><input type="text" id="txtName"></td>
+        </tr>
+        <tr>
+            <td> <label for="txtGender"> Gender: </label> </td>
+            <td>
+                <select id="txtGender">
+                    <option value="M"> Male </option>
+                    <option value="F"> Female </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="txtProduct"> Product: </label> </td>
+            <td>
+                <select id="txtProduct">
+                    <option value="CocaCola"> CocaCola </option>
+                    <option value="Pepsi"> Pepsi </option>
+                    <option value="Funta"> Funta </option>
+                    <option value="Sting"> Sting </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="txtUnitPrice"> Unit Price: </label> </td>
+            <td><input type="number" id="txtUnitPrice"></td>
+        </tr>
+        <tr>
+            <td> <label for="txtQty"> Qty: </label> </td>
+            <td><input type="number" id="txtQty"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="SHOW"></td>
+        </tr>
+    </table>
+    <div class="showResult">
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;"> Customer Name: </td>
+            </tr>
+            <tr>
+                <td> Last Name: </td>
+                <td id="lName" style="width: 150px;"> </td>
+            </tr>
+            <tr>
+                <td> First Name: </td>
+                <td id="fName"> </td>
+            </tr>
+            <tr>
+                <td> Product: </td>
+                <td id="product"> </td>
+            </tr>
+            <tr>
+                <td> Unit Price: </td>
+                <td id="unitPrice"> </td>
+            </tr>
+            <tr>
+                <td> Qty: </td>
+                <td id="qty"> </td>
+            </tr>
+            <tr>
+                <td> Amount: </td>
+                <td id="amount"> </td>
+            </tr>
+            <tr>
+                <td> Discount: </td>
+                <td id="discount"> </td>
+            </tr>
+            <tr>
+                <td> Price After Discount: </td>
+                <td id="pad"> </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
