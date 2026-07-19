@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h3{
+            padding: 0;
+            margin: 0;
+        }
+        table, td{
+            border: 2px solid green;
+        }
+        td{
+            padding: 5px;
+        }
+        table{
+            border-collapse: collapse;
+            margin-bottom: 90px;
+        }
+    </style>
 </head>
 <body>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
     <script>
         let students =[
             ["001","Ang Solika","F"],
@@ -14,7 +36,15 @@
             ["004","Seang Mongkol","M"],
             ["005","Doung Chakriya","F"],
         ];
-        document.write(students[0][1]);
+        // document.write(students[0][1]);
+        for (i=0; i<students.length; i++){
+            document.writeln("<tr>");
+            document.writeln("<th>"+students[i][0]+"</th>");
+            document.writeln("<th>"+students[i][1]+"</th>");
+            document.writeln("<th>"+students[i][2]+"</th>");
+            document.writeln("</tr>");
+        }
     </script>
+    </table>
 </body>
 </html>
