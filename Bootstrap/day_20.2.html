@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            background-color: #ededed;
+        }
+        .feature-card{
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-card:hover{
+            transform: translateY(-10px);
+        }
+        .bi-1{
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    
+    <!-----------------------> 
+    <!------NAVIGATION------->
+    <!----------------------->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <div class="container ">
+            <button class="btn btn-dark btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <i class="bi bi-book"> </i>Menu
+            </button>
+        </div> 
+        <div class="container">
+            <a class="navbar-brand text-center fw-bold" href="#home">
+                <i class="bi bi-lightning text-warning"></i>TechStore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="btn btn-warning btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <i class="bi bi-cart text-black"> </i>
+            <span class="badge rounded-pill bg-danger">3</span>
+        </button>
+        </div><!--end container-->
+    </nav>
+    <div class="offcanvas offcanvas-start " id="demo">
+        <div class="offcanvas-header bg-dark text-light">
+                <i class="bi bi-lightning text-warning"></i>TechStore
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+                <div class="card-body text-center">
+                        <div class="bg-primary rounded-circle d-inline-flex justify-content-center align-items-center" style="width: 90px; height: 90px;">
+                            <i class="bi bi-person-vcard-fill text-white fs-10 display-1"></i>
+                        </div>
+                        <h3 class="mt-2"> John Smith</h3>
+                        <h5>Premium Member</h5>
+                </div>
+                <h3>Main Menu</h3>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action"><i class="bi bi-houses-fill text-danger"> </i>Home</li>
+                    <li class="list-group-item list-group-item-action"><i class="bi bi-shop text-info"> </i>Product</li>
+                    <li class="list-group-item list-group-item-action"><i class="bi bi-bag-heart-fill text-success"> </i>Wishlist</li>
+                    <li class="list-group-item list-group-item-action"><i class="bi bi-bag-fill text-warning"> </i>My Oder</li>
+                </ul>
+        </div>
+    </div>
+    <div class="container text-center my-5">
+        <h2 class="mt-2 fw-bold"> Welcome to TechStore</h2>
+        <p>Discover the latest in technology</p>
+        <button class="btn btn-primary">
+            <i class="bi bi-book"></i> Explore Menu
+        </button>
+    </div>
+    
+    <!-----------------------> 
+    <!--------REVIEW--------->
+    <!----------------------->
+
+    <div class="container ">
+        <div class="row g-4">
+            <div class="col-lg-4 ">
+                <div class="card feature-card border-0 h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi-1 bi-laptop text-primary display-1"></i>
+                        <h4 class="mt-2"> Laptops</h4>
+                        <p>Powerful performance for all your needs</p>
+                        <button type="button" class="btn btn-outline-primary">Explore</button>
+                    </div>
+                </div><!--end card-->
+            </div><!--col-lg-4-->
+            <div class="col-lg-4">
+                <div class="card feature-card border-0 h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi-1 bi-phone text-success display-1"></i>
+                        <h4 class="mt-2"> Smartphones</h4>
+                        <p>Stay connected with the latest smartphones</p>
+                        <button type="button" class="btn btn-outline-success">Explore</button>
+                    </div>
+                </div><!--end card-->
+            </div><!--col-lg-4-->
+            <div class="col-lg-4">
+                <div class="card feature-card border-0 h-100 shadow-sm">
+                    <div class="card-body text-center ">
+                        <i class="bi-1 bi-controller text-danger display-1"></i>
+                        <h4 class="mt-2"> Gaming</h4>
+                        <p>Experience immersive gaming like never before</p>
+                        <button type="button" class="btn btn-outline-danger">Explore</button>
+                    </div>
+                </div><!--end card-->
+            </div><!--col-lg-4-->
+        </div><!--row-->
+    </div><!--end container-->  
+</body>
+
+</html>

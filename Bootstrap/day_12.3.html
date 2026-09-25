@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="progress mt-2" style="height:40px;">
+            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 0%;" id="MyProgress">0%</div>
+        </div>
+        <button type="button" class="btn btn-primary mt-2" onclick="startLoading()">Start Loading</button>
+        <button type="button" class="btn btn-warning mt-2" onclick="reverseLoading()">Reverse Progress</button>
+    </div>
+    <script>
+        function startLoading() {
+            let progressBar = document.getElementById("MyProgress");
+            progressBar.classList.remove ("bg-warning");
+            progressBar.classList.add ("bg-success");
+            let width = 0;
+            progressBar.style.width = "0%";
+            progressBar.innerHTML = "0%";
+            let interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = width + "%";
+                    progressBar.innerHTML = width + "%";
+                }
+            }, 10);
+        }
+        function reverseLoading() {
+            let progressBar = document.getElementById("MyProgress");
+            progressBar.classList.remove ("bg-success");
+            progressBar.classList.add ("bg-warning");
+            let width = 100;
+            let interval = setInterval(function() {
+                if (width <= 0) {
+                    clearInterval(interval);
+                } else {
+                    width--;
+                    progressBar.style.width = width + "%";
+                    progressBar.innerHTML = width + "%";
+                }
+            }, 10);
+        }
+    </script>
+            
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+    </style>
+</head>
+
+<body class="bg-success">
+    <div class="container py-4">
+        <!--Header-->
+        <div class="text-center text-white">
+            <i class="bi bi-mortarboard-fill display-4 text-warning"></i>
+            <h1 class=" fw-bold">Student Profile</h1>
+            <p>Create and manage your student information</p>
+        </div>
+        <div class="card border-0 shadow-lg">
+            <div class="card-body">
+                <div class="row">
+
+                    <!--Left Form-->
+
+                    <div class="col-lg-4">
+                        <div class="card bg-light border-0">
+                            <div class="card-body text-center">
+                                <div class="mb3">
+                                    <span class="bg-success text-white rounded-circle d-inline-flex align-item-center justify-content-center p-3">
+                                        <i class="bi bi-person-fill display-4"></i>
+                                    </span>
+                                </div>
+                                <h3 class="fw-bold text-success">Student Profile</h3>
+                                <p class="text-muted">Upload your profile picture and complete your information</p>
+                                <label  class="form-label fw-bold">Profile Picture</label>
+                                <input type="file" class="form-control" >
+                                <label  class="form-label fw-bold">Student ID</label>
+                                <input type="text" class="form-control text-center" placeholder="ST2026001">
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div><!--end col-lg-4-->
+
+                    <!--Right Form-->
+
+                    <div class="col-lg-8">
+                        <h4 class="fw-bold text-success ">
+                            <i class="bi bi-person-lines-fill me-2"></i>
+                            Personal Information
+                        </h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="fName" class="form-label fw-bold">First Name</label>
+                                <input type="text" class="form-control" id="fName">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="lName" class="form-label fw-bold">Last Name</label>
+                                <input type="text" class="form-control" id="lName">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="gender" class="form-label fw-bold">Gender</label>
+                                <select class="form-select" id="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="dob" class="form-label fw-bold">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="email" class="form-label fw-bold">Email</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-success">
+                                        <i class="bi bi-envelope text-white"></i>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="phone" class="form-label fw-bold">Phone</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-success">
+                                        <i class="bi bi-telephone text-white"></i>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" placeholder="012424674">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="department" class="form-label fw-bold">Department</label>
+                                <select class="form-select" id="department">
+                                    <option value="">Select Department</option>
+                                    <option value="IT">IT</option>
+                                    <option value="HR">HR</option>
+                                    <option value="Finance">Finance</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="year" class="form-label fw-bold">Year</label>
+                                <select class="form-select" id="year">
+                                    <option value="">Select Year</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="address" class="form-label fw-bold">Address</label>
+                                <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="skill" class="form-label fw-bold">Skill</label>
+                                <div >
+                                    <input type="checkbox" class="form-check-input" checked>
+                                    <label class="form-check-label me-4">HTML</label>
+                                    <input type="checkbox" class="form-check-input" checked>
+                                    <label class="form-check-label me-4">CSS</label>
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label me-4">JavaScript</label>
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label me-4">Bootstrap</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 text-end mt-3">
+                                <hr class="flex-grow-1">
+                                <button type="button" class="btn btn-secondary">
+                                    <i class="bi bi-arrow-counterclockwise me-2"></i>
+                                    Reset
+                                </button>
+                                <button type="button" class="btn btn-warning">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    Save Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div><!--end col-lg-8-->
+                </div><!--end row-->
+            </div><!--end card-body-->
+            <div class=" bg-dark text-white text-center py-1">
+                <p> 2026 TECH TODAY. All rights reserved.</p>
+            </div>
+        </div><!--end card-->
+    </div><!--end container-->
+</body>
+
+</html>
